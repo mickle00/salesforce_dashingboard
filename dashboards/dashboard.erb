@@ -1,0 +1,28 @@
+<% content_for(:title) { "GSO Salesforce Support Dashboard" } %>
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="welcome" data-view="Text" data-title="Chatter" data-text="Chizzatter Fizzeeed" data-moreinfo="@Mention's y'all"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="synergy" data-view="Meter" data-title="Cases Opened Today" data-min="0" data-max="100"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="synergy" data-view="Meter" data-title="Cases Closed Today" data-min="0" data-max="100"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+      <div data-id="cases" data-view="List" data-unordered="true" data-title="Open Cases By Team" data-moreinfo="# of times said around the office"></div>
+    </li>
+
+    <%# <li data-row="1" data-col="1" data-sizex="1" data-sizey="1"> %>
+    <%#   <div data-id="valuation" data-view="Number" data-title="Current Valuation" data-moreinfo="In billions" data-prefix="$"></div> %>
+    <%# </li> %>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="convergence" data-view="Graph" data-title="Total Open Cases" style="background-color:#ff9618"></div>
+    </li>
+  </ul>
+</div>
