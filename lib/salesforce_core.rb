@@ -12,7 +12,11 @@ end
 private 
 
     def login
-        @client = Databasedotcom::Client.new('databasedotcom.yml')
+        @client = Databasedotcom::Client.new()
+        @client.host = ENV['DATABASEDOTCOM_HOST']
+        @client.version = ENV['DATABASEDOTCOM_VERSION']
+        @client.username = ENV['DATABASEDOTCOM_USERNAME']
+        @client.password = ENV['DATABASEDOTCOM_PASSWORD']
         @client.authenticate
         @client.materialize('Report')
         @client
