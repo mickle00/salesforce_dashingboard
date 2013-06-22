@@ -15,6 +15,9 @@ class Dashing.Graph extends Dashing.Widget
       element: @node
       width: width
       height: height
+      padding: {
+        top: "0.25"
+      }
       series: [
         {
         color: "#fff",
