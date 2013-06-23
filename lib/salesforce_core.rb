@@ -9,6 +9,16 @@ def execute_report(devName)
     JSON.load(res.body)
 end
 
+def get_top_level_summary(devName)
+    rep = execute_report(devName)
+    values = []
+    rep['groupingsDown']['groupings'].each do |r|
+        lookupKey = r['key'] + '!T'
+        values << {'label' => r['label'], 'value' => rep['factMap'][lookupKey]['aggregates'][0]['value']}
+    end
+    returnVal = {'summary' => get_report_summary(rep), 'values'=> values}
+end
+
 private 
 
     def login
