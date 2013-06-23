@@ -4,10 +4,10 @@ class Dashing.Comments extends Dashing.Widget
     "“#{@get('current_comment')?.body}”"
 
   ready: ->
-    @currentIndex = 0
+    @currentIndex = -1 # next comment will start this at 0th element
     @commentElem = $(@node).find('.comment-container')
-    @nextComment()
     @startCarousel()
+    @nextComment()
 
   onData: (data) ->
     @currentIndex = 0
